@@ -1,6 +1,4 @@
-import logging, json, csv
-from datetime import datetime
-from pytz import timezone
+import logging, csv
 from sym_api_client_python.configure.configure import SymConfig
 from sym_api_client_python.auth.rsa_auth import SymBotRSAAuth
 from sym_api_client_python.clients.sym_bot_client import SymBotClient
