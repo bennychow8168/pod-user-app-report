@@ -56,7 +56,7 @@ def main():
 
             u = dict()
             u['userAttributes'] = user["userAttributes"]
-            if 'products' in app:
+            if 'products' in app and app['products'] is not None:
                 u['subscription'] = app['products'][0]['name']
             app_list[app_id].append(u)
 
@@ -116,7 +116,7 @@ def retrieve_installed_apps(bot_client, user_id):
     final_result = []
     for o in output:
         if o["install"]:
-            if 'products' in o:
+            if 'products' in o and o['products'] is not None:
                 new_prod = []
                 for p in o['products']:
                     if p['subscribed']:
